@@ -3,7 +3,7 @@
 #PBS -N wmaSeg
 #PBS -V
 
-echo "running segmentation"
+echo "running outlier removal"
 singularity exec -e docker://brainlife/mcr:neurodebian1604-r2017a ./compiled/wma_removeTractOutliers_BL
 
 if [ ! -s classification.mat ]; then
