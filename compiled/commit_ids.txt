@@ -12,7 +12,6 @@ Date:   Tue Aug 20 12:20:38 2019 -0400
 
     fix table transpose issue for uniform type tables
 /N/u/brlife/git/wma_tools
-<<<<<<< HEAD
 commit a4212a0d818c095c0d3c19e57df02a3c7993c458
 Author: Soichi Hayashi <Soichi Hayashi>
 Date:   Fri Aug 30 17:28:07 2019 -0400
@@ -21,16 +20,6 @@ Date:   Fri Aug 30 17:28:07 2019 -0400
     moved wma_removeTractOutliers_BL.m to app-removeTractOutliers
     updated the progress report displayed by removeOutliersClassification
     other minor clean ups
-=======
-commit 0b93cd08c73d1fc98a4c50ec6d2087fe96737b97
-Merge: 1c5dfac e75d610
-Author: Daniel Bullock <iisdanbul@gmail.com>
-Date:   Mon Aug 26 12:51:09 2019 -0400
-
-    Merge pull request #7 from bacaron/patch-1
-    
-    Update bsc_LoadAndParseFiberStructure.m
->>>>>>> d4c2c521d1f83b44119a6269e8a9a1331cfa879a
 /N/u/brlife/git/mba
 commit 8f66ea6054d7aaa653c70ecc46f7fe55d61ab972
 Author: Soichi Hayashi <hayashis@iu.edu>
