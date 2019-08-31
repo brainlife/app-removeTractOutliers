@@ -14,7 +14,7 @@ echo "/N/u/brlife/git/mba" >> $log
 (cd /N/u/brlife/git/mba && git log -1) >> $log
 
 cat > build.m <<END
-addpath(genpath('/N/u/hayashis/git/vistasoft'))
+addpath(genpath('/N/u/brlife/git/vistasoft'))
 addpath(genpath('/N/u/brlife/git/jsonlab'))
 addpath(genpath('/N/u/brlife/git/mba'))
 addpath(genpath('/N/u/hayashis/git/wma_tools'))
