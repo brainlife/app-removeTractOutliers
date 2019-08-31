@@ -1,37 +1,29 @@
 /N/u/brlife/git/vistasoft
-commit cf75f1a8c037382d6a157f0a7b683a3fd424ee4c
-Merge: 8bea0b7 7e4a5c5
-Author: rokers <rokers@gmail.com>
-Date:   Fri Jul 13 17:13:01 2018 -0400
+commit 746e7a7895c9e66cf712d9a9517cddd0702312ae
+Author: Soichi Hayashi <soichih@gmail.com>
+Date:   Fri Aug 23 14:38:22 2019 -0400
 
-    Merge branch 'master' of https://github.com/vistalab/vistasoft
+    refactored code to parse tck params in to a separate function
+    (dtiGetFgParams) so that users can easily access the tck headers
 /N/u/brlife/git/jsonlab
-commit 474d8c824800b5f2109c08f989085cb961acdbe3
-Merge: ae7a5d9 38b24fb
+commit 31eabbaab227d500786aaa472b9f5bbd9f082c61
 Author: Qianqian Fang <fangqq@gmail.com>
-Date:   Wed Sep 6 13:01:57 2017 -0400
+Date:   Tue Aug 20 12:20:38 2019 -0400
 
-    Merge pull request #41 from dasantonym/master
-    
-    added package.json to be able to intall via npm package manager
+    fix table transpose issue for uniform type tables
 /N/u/brlife/git/wma_tools
-commit abfc8d3dcae594775e73cbed8d97a98e084b840b
-Author: Daniel Bullock <dnbulloc@iu.edu>
-Date:   Wed May 15 16:58:52 2019 -0400
+commit a4212a0d818c095c0d3c19e57df02a3c7993c458
+Author: Soichi Hayashi <Soichi Hayashi>
+Date:   Fri Aug 30 17:28:07 2019 -0400
 
-    fixed the fixes
-/N/u/brlife/git/encode
-commit 538a73bc4f8b4d94545bc2dfe434fec55e0c7a95
-Author: Soichi Hayashi <hayashis@iu.edu>
-Date:   Tue Jan 22 10:14:41 2019 -0500
-
-    fixed the issue where fiber goes missing.
+    replaced wma_loadTck content with fgRead
+    moved wma_removeTractOutliers_BL.m to app-removeTractOutliers
+    updated the progress report displayed by removeOutliersClassification
+    other minor clean ups
 /N/u/brlife/git/mba
-commit 331ad7f1320c2e96c7563c6b3805154e8364df96
-Merge: 03b97b3 eb9d210
-Author: Franco Pestilli <frakkopesto@gmail.com>
-Date:   Thu Nov 12 10:09:38 2015 -0500
+commit 8f66ea6054d7aaa653c70ecc46f7fe55d61ab972
+Author: Soichi Hayashi <hayashis@iu.edu>
+Date:   Tue May 21 09:43:42 2019 -0400
 
-    Merge pull request #4 from francopestilli/master
-    
-    Documentation: Update mbaFiberProperties.m
+    merging dan's local changes to make it work with newer version of
+    matlab(?)

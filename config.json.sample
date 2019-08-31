@@ -2,6 +2,6 @@
     "centroidSD": 4,
     "lengthSD": 4,
     "maxIter": 2,
-    "classification": "testdata/single/classification.mat",
-    "track": "testdata/single/track.tck"
+    "classification": "testdata/full/classification.mat",
+    "track": "testdata/full/track.tck"
 }

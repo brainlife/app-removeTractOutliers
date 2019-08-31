@@ -10,6 +10,8 @@ echo "/N/u/brlife/git/jsonlab" >> $log
 (cd /N/u/brlife/git/jsonlab && git log -1) >> $log
 echo "/N/u/brlife/git/wma_tools" >> $log
 (cd /N/u/brlife/git/wma_tools && git log -1) >> $log
+echo "/N/u/brlife/git/mba" >> $log
+(cd /N/u/brlife/git/mba && git log -1) >> $log
 
 cat > build.m <<END
 addpath(genpath('/N/u/brlife/git/vistasoft'))
