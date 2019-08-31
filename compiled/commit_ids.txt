@@ -15,23 +15,18 @@ Date:   Wed Sep 6 13:01:57 2017 -0400
     
     added package.json to be able to intall via npm package manager
 /N/u/brlife/git/wma_tools
-commit abfc8d3dcae594775e73cbed8d97a98e084b840b
-Author: Daniel Bullock <dnbulloc@iu.edu>
-Date:   Wed May 15 16:58:52 2019 -0400
+commit 0b93cd08c73d1fc98a4c50ec6d2087fe96737b97
+Merge: 1c5dfac e75d610
+Author: Daniel Bullock <iisdanbul@gmail.com>
+Date:   Mon Aug 26 12:51:09 2019 -0400
 
-    fixed the fixes
-/N/u/brlife/git/encode
-commit 538a73bc4f8b4d94545bc2dfe434fec55e0c7a95
-Author: Soichi Hayashi <hayashis@iu.edu>
-Date:   Tue Jan 22 10:14:41 2019 -0500
-
-    fixed the issue where fiber goes missing.
-/N/u/brlife/git/mba
-commit 331ad7f1320c2e96c7563c6b3805154e8364df96
-Merge: 03b97b3 eb9d210
-Author: Franco Pestilli <frakkopesto@gmail.com>
-Date:   Thu Nov 12 10:09:38 2015 -0500
-
-    Merge pull request #4 from francopestilli/master
+    Merge pull request #7 from bacaron/patch-1
     
-    Documentation: Update mbaFiberProperties.m
+    Update bsc_LoadAndParseFiberStructure.m
+/N/u/brlife/git/mba
+commit 8f66ea6054d7aaa653c70ecc46f7fe55d61ab972
+Author: Soichi Hayashi <hayashis@iu.edu>
+Date:   Tue May 21 09:43:42 2019 -0400
+
+    merging dan's local changes to make it work with newer version of
+    matlab(?)
