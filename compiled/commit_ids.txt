@@ -1,9 +1,4 @@
 /N/u/brlife/git/vistasoft
-commit 9953a8177f874941e10282a748af42eba71616cc
-Author: Soichi Hayashi <Soichi Hayashi>
-Date:   Fri Aug 30 23:00:16 2019 -0400
-
-    added check to make sure all expected fibers are loaded
 /N/u/brlife/git/jsonlab
 commit 31eabbaab227d500786aaa472b9f5bbd9f082c61
 Author: Qianqian Fang <fangqq@gmail.com>
@@ -11,14 +6,6 @@ Date:   Tue Aug 20 12:20:38 2019 -0400
 
     fix table transpose issue for uniform type tables
 /N/u/brlife/git/wma_tools
-commit a4212a0d818c095c0d3c19e57df02a3c7993c458
-Author: Soichi Hayashi <Soichi Hayashi>
-Date:   Fri Aug 30 17:28:07 2019 -0400
-
-    replaced wma_loadTck content with fgRead
-    moved wma_removeTractOutliers_BL.m to app-removeTractOutliers
-    updated the progress report displayed by removeOutliersClassification
-    other minor clean ups
 /N/u/brlife/git/mba
 commit 8f66ea6054d7aaa653c70ecc46f7fe55d61ab972
 Author: Soichi Hayashi <hayashis@iu.edu>
