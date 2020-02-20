@@ -3,8 +3,8 @@ function main()
 if ~isdeployed
     disp('adding paths');
     addpath(genpath('/N/u/brlife/git/jsonlab'))
-    addpath(genpath('/N/u/brlife/git/vistasoft'))
     addpath(genpath('/N/u/brlife/git/mba'))
+    addpath(genpath('/N/u/hayashis/git/vistasoft'))
     addpath(genpath('/N/u/brlife/git/wma_tools'))
 end
 
@@ -44,7 +44,7 @@ for it = 1:length(fg_classified)
     %pick randomly up to 1000 fibers (pick all if there are less than 1000)
     fiber_count = min(1000, numel(fg_classified{it}.fibers));
     tract.coords = fg_classified{it}.fibers(randperm(fiber_count))';
-    %tract.coords = cellfun(@(x)round(x,3), tract.coords', 'UniformOutput', false);
+    tract.coords = cellfun(@(x)round(x,3), tract.coords', 'UniformOutput', false);
     savejson('', tract, 'FileName', fullfile(tractspath,sprintf('%i.json',it)), 'FloatFormat', '%.5g');
     
     all_tracts(it).name = fg_classified{it}.name;

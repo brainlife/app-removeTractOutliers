@@ -1,11 +1,9 @@
-/N/u/brlife/git/vistasoft
 /N/u/brlife/git/jsonlab
 commit 31eabbaab227d500786aaa472b9f5bbd9f082c61
 Author: Qianqian Fang <fangqq@gmail.com>
 Date:   Tue Aug 20 12:20:38 2019 -0400
 
     fix table transpose issue for uniform type tables
-/N/u/brlife/git/wma_tools
 /N/u/brlife/git/mba
 commit 8f66ea6054d7aaa653c70ecc46f7fe55d61ab972
 Author: Soichi Hayashi <hayashis@iu.edu>
@@ -13,3 +11,17 @@ Date:   Tue May 21 09:43:42 2019 -0400
 
     merging dan's local changes to make it work with newer version of
     matlab(?)
+/N/u/brlife/git/wma_tools
+commit ae863769e7e732c3bcf730f30ac13a59be402b8d
+Author: Daniel Bullock <iisdanbul@gmail.com>
+Date:   Sun Feb 16 17:41:43 2020 -0500
+
+    fixed indexing issue
+    
+    fixed indexing issue with this line.  Note, other versions of this function do not have this issue.  Recommend replacing instances of this function with v4 https://github.com/DanNBullock/wma_tools/blob/master/bsc_makeFGsFromClassification_v4.m
+/N/u/hayashis/git/vistasoft
+commit a517bdce344e25f08504ede1bf532d8d2626b0b8
+Author: Soichi Hayashi <hayashis@iu.edu>
+Date:   Fri Sep 6 16:23:49 2019 +0000
+
+    cleaner handling in case of empty fg.fibers
