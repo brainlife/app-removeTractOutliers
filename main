@@ -7,7 +7,7 @@ set -e
 set -x
 
 echo "running outlier removal"
-singularity exec -e docker://brainlife/mcr:neurodebian1604-r2017a ./compiled/main
+singularity exec -e docker://brainlife/mcr:R2019a ./compiled/main
 
 if [ ! -f "classification/classification.mat" ]; then
 	echo "output missing"
