@@ -3,6 +3,37 @@
 [![Run on Brainlife.io](https://img.shields.io/badge/Brainlife-bl.app.195-blue.svg)](https://doi.org/10.25663/brainlife.app.195)
 
 # app-removeTractOutliers
+
+<!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
+
+**Removes outlier streamlines from each tract of a white matter classification by distance from the tract centroid and by length, using mbaComputeFibersOutliers.**
+
+Iteratively removes streamlines more than centroidSD standard deviations from the tract core or lengthSD from the mean length (up to maxIter passes) and saves a cleaned classification with tract JSONs; surfaces from the input are copied over. Use it on coherent, tract-like bundles; it is not meant for arbitrary streamline groupings.
+
+Run it on brainlife.io: [https://doi.org/10.25663/brainlife.app.195](https://doi.org/10.25663/brainlife.app.195)
+
+| Input | Datatype | Required | Description |
+|---|---|---|---|
+| `classification` | `neuro/wmc` | yes | White matter classification (classification.mat) to clean. Must index the streamlines of the given tractogram. |
+| `wbfg` | `neuro/track/tck` | yes | Tractogram (.tck) the classification refers to. Streamline count must equal the length of the classification index. |
+
+| Output | Datatype | Description |
+|---|---|---|
+| `classification` | `neuro/wmc` | Cleaned white matter classification (classification.mat) with tract JSONs and the input surfaces. |
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| `centroidSD` | number | `4` | Cut streamlines which are this many standard deviations away from the tract centroid. |
+| `lengthSD` | number | `4` | Cut streamlines which are this many standard deviations away from the tract average streamline length. |
+| `maxIter` | number | `5` | The maximum number of iterations to compute tract averages and apply a cut. |
+
+Runtime: container `brainlife/mcr:r2019a`; 8 CPUs; 28 GB memory; 10 h walltime.
+
+Please cite:
+- Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
+
+<!-- brainlife-app:end -->
+
 This app uses [mbaComputeFibersOutliers](https://github.com/francopestilli/mba/blob/master/compute/mbaComputeFibersOutliers.m) from the [Matlab Brain Anatomy (MBA)](https://github.com/francopestilli/mba) script collection to perform a fiber cleaning operation.  Specifically, it removes outlier streamlines on the basis of ether [distance from fiber centroid core](https://github.com/francopestilli/mba/blob/1f06c4bd86da41322d292bfb0318ab61efe8b4a5/compute/mbaComputeFibersOutliers.m#L11) or [distance from mean streamline length](https://github.com/francopestilli/mba/blob/1f06c4bd86da41322d292bfb0318ab61efe8b4a5/compute/mbaComputeFibersOutliers.m#L13).  Moreover, this app performs this operation iteratively across all fiber tracts mapped in the input [White Matter Classification (WMC)](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b).  For this reason, it is advised that this application not be applied to [White Matter Classification (WMC)](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b) structures that do not correspond to "coherent white matter tracts", as the mathematical operations performed assume a "tract-like" morphology and coherence.
 
 ### Authors
