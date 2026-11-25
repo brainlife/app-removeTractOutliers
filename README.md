@@ -10,7 +10,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT license"></a>
 </p>
 
-## 🧠 At a glance
+## At a glance
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
@@ -20,27 +20,27 @@ Iteratively removes streamlines more than centroidSD standard deviations from th
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/wmc` · `neuro/track/tck` |
-| 📤 **Outputs** | `neuro/wmc` |
-| 🐳 **Container** | `brainlife/mcr:r2019a` |
-| ⚙️ **Resources** | 8 CPUs · 28 GB memory · 10 h walltime |
-| 🔗 **Run it** | [doi.org/10.25663/brainlife.app.195](https://doi.org/10.25663/brainlife.app.195) |
+| **Inputs** | `neuro/wmc` · `neuro/track/tck` |
+| **Outputs** | `neuro/wmc` |
+| **Container** | `brainlife/mcr:r2019a` |
+| **Resources** | 8 CPUs · 28 GB memory · 10 h walltime |
+| **Run it** | [doi.org/10.25663/brainlife.app.195](https://doi.org/10.25663/brainlife.app.195) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
 | `classification` | `neuro/wmc` | yes | White matter classification (classification.mat) to clean. Must index the streamlines of the given tractogram. |
 | `wbfg` | `neuro/track/tck` | yes | Tractogram (.tck) the classification refers to. Streamline count must equal the length of the classification index. |
 
-#### 📤 Outputs
+#### Outputs
 
 | Output | Datatype | Description |
 |---|---|---|
 | `classification` | `neuro/wmc` | Cleaned white matter classification (classification.mat) with tract JSONs and the input surfaces. |
 
 <details>
-<summary><b>⚙️ Parameters</b> (3)</summary>
+<summary><b>Parameters</b> (3)</summary>
 
 | Parameter | Type | Default | Description |
 |---|---|---|---|
@@ -52,7 +52,7 @@ Iteratively removes streamlines more than centroidSD standard deviations from th
 
 <!-- brainlife-app:end -->
 
-## 🏷️ Versions on brainlife.io
+## Versions on brainlife.io
 
 Each version is a separate App on brainlife.io, built from its own branch of this repository.
 
@@ -61,9 +61,9 @@ Each version is a separate App on brainlife.io, built from its own branch of thi
 | Remove Tract Outliers | `neuro/wmc` | [`1.4`](https://github.com/brainlife/app-removeTractOutliers/tree/1.4) | [doi:10.25663/brainlife.app.195](https://doi.org/10.25663/brainlife.app.195) | current |
 | Remove Tract Outliers | `neuro/wmc-deprecated` | [`1.3`](https://github.com/brainlife/app-removeTractOutliers/tree/1.3) | [doi:10.25663/brainlife.app.157](https://doi.org/10.25663/brainlife.app.157) | deprecated |
 
-## 🚀 Running the App
+## Running the App
 
-### ☁️ On brainlife.io
+### On brainlife.io
 
 Open the App at [doi.org/10.25663/brainlife.app.195](https://doi.org/10.25663/brainlife.app.195), choose a [White Matter Classification (WMC)](https://brainlife.io/datatype/5cc1d64c44947d8aea6b2d8b) and the **corresponding** [tractogram](https://brainlife.io/datatype/5907d922436ee50ffde9c549) (`neuro/track/tck`), set the parameters and press **Execute**. The cleaned classification is archived as a `neuro/wmc` dataset tagged `cleaned`.
 
@@ -75,7 +75,7 @@ The App wraps [`mbaComputeFibersOutliers`](https://github.com/francopestilli/mba
 
 Do not apply it to classifications whose entries are not coherent white matter tracts: the computation assumes a tract-like morphology.
 
-### 💻 Locally
+### Locally
 
 You need [Singularity/Apptainer](https://apptainer.org/) and [`jq`](https://jqlang.github.io/jq/). The App runs the compiled MATLAB code in the `brainlife/mcr:r2019a` container.
 
@@ -100,11 +100,11 @@ You need [Singularity/Apptainer](https://apptainer.org/) and [`jq`](https://jqla
 
 Since this App is essentially a wrapper, if you want to use the method in your own code you may prefer to call the [wrapper](https://github.com/DanNBullock/wma_tools/blob/master/ClassificationStruc_Tools/removeOutliersClassification.m) or the [underlying function](https://github.com/francopestilli/mba/blob/master/compute/mbaComputeFibersOutliers.m) directly. [Comparable methods](https://dipy.org/documentation/1.0.0./examples_built/cluster_confidence/) are available in [DIPY](https://dipy.org/).
 
-### 🧪 Sample data
+### Sample data
 
 Viable classification and tractography inputs from the HCP are in this brainlife.io project: <https://brainlife.io/project/5c3caea0a6747b0036dcbf9a/>.
 
-## 📦 Outputs
+## Outputs
 
 ```text
 classification/
@@ -115,12 +115,12 @@ classification/
 
 `product.json` reports the streamline count of each tract.
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 - **`wmc(N) and track fiber(M) counts do not match`**: the classification and the tractogram come from different tracking runs. Use the tractogram the classification was made from.
 - **`output missing`**: `classification/classification.mat` was not produced. Check the log for a count mismatch or a MATLAB error.
 
-## 📚 Citing
+## Citing
 
 > [!TIP]
 > If you use this App in your work, please cite the App, the software it builds on and brainlife.io (below). GitHub's **Cite this repository** button gives the App citation in APA and BibTeX.
@@ -129,14 +129,14 @@ classification/
 - Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. Sci Data 6, 69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
 - Hayashi S, Caron BA, Heinsfeld AS, et al. brainlife.io: a decentralized and open-source cloud platform to support neuroscience research. *Nature Methods* 21:809–813 (2024). [doi:10.1038/s41592-024-02237-2](https://doi.org/10.1038/s41592-024-02237-2)
 
-## 👥 Authors
+## Authors
 
 - Daniel Bullock
 - Franco Pestilli (project director)
 
 **Contributors:** Soichi Hayashi
 
-## 💰 Funding
+## Funding
 
 [![Wellcome-226486/Z/22/Z](https://img.shields.io/badge/Wellcome-226486%2FZ%2F22%2FZ-purple.svg)](https://wellcome.org/)
 [![NIH-NINDS-U24NS140384](https://img.shields.io/badge/NIH_NINDS-U24NS140384-green.svg)](https://reporter.nih.gov/project-details/11261037)
@@ -155,6 +155,6 @@ classification/
 
 <sub>brainlife.io is publicly funded, and acknowledging that support helps keep it running. This App was developed with support from Wellcome, the U.S. National Institutes of Health (including the BRAIN Initiative BRAIN CONNECTS program: The Axonal Projectome EXchange, U24NS140384, and the Center for Mesoscale Connectomics, UM1NS132207) and the U.S. National Science Foundation.</sub>
 
-## ⚖️ License
+## License
 
 [MIT](LICENSE).
